@@ -3,13 +3,13 @@ describe('Login', () => {
     cy.visit('https://front-cras.app.fslab.dev/')
   })
 
-  it("Deve realizar o login com sucesso- cenário de  sucesso", () =>{  //it.skip ( quando eu quero pular o teste)
-  cy.get("#email").type("dev@gmail.com");
-  cy.get("#senha").type("123");
-  cy.get(".styles_button__dr0t2").click();
+  it("Deve realizar o login com sucesso- cenário de  sucesso", () => {  //it.skip ( quando eu quero pular o teste)
+    cy.get("#email").type("dev@gmail.com");
+    cy.get("#senha").type("123");
+    cy.get(".styles_button__dr0t2").click();
   })
 
-  it("Deve retornar mensagem de erro devido usuário inválido  - cenário de insucesso", () =>{
+  it("Deve retornar mensagem de erro devido usuário inválido  - cenário de insucesso", () => {
     cy.get("#email").type("deve@gmail.com");
     cy.get("#senha").type("123");
     cy.get(".styles_button__dr0t2").click();
